@@ -1,6 +1,7 @@
 " Vim syntax file
 " Language:	CMakeCache
 " Author:	Neui
+" Version:	1.0.0
 
 if exists("b:current_syntax")
 	finish
