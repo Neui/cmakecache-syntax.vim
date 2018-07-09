@@ -1,0 +1,16 @@
+image: debian:stable
+
+pack:
+    before_script:
+        - apt-get update -qq && apt-get install -y -qq tar p7zip-full
+    script:
+        - sh packs.sh
+    artifacts:
+        name: "Release"
+        paths:
+            - "*.tar.*"
+            - "*.zip"
+            - "*.7z"
+    only:
+        - tags
+
